@@ -1,0 +1,25 @@
+/*
+ * Copyright 2019 MYiR Devices
+ */
+ 
+#include "myb-fsl-imx8mm-evk.dts"
+#include "panel-st2151b01-1.dtsi"
+
+/{
+     display-subsystem {                                                                                
+         status = "okay";
+	};
+};
+
+&lcdif{
+	max-res = <1920>, <1080>;
+	status = "okay";
+};
+
+&i2c2 {
+	tc358775:tc358775@0x0f{
+		compatible = "toshiba,tc358775";
+		reg  = <0x0f>;
+		status = "okay";
+	};
+};
